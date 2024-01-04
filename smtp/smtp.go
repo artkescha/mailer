@@ -6,7 +6,7 @@ import (
 	"net"
 	"net/smtp"
 
-	"mailer/v1/message"
+	"github.com/artkescha/mailer/v1/message"
 )
 
 type sender struct {
