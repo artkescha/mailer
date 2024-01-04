@@ -1,3 +1,3 @@
-module github.com/artkescha/mailer/v1
+module github.com/artkescha/mailer
 
 go 1.21.5
