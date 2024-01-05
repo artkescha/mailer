@@ -48,12 +48,6 @@ func send(server *EmailServer, recipients []string, message *message.Message) er
 	defer func() {
 		_ = client.Quit()
 	}()
-	hasStartTLS, _ := client.Extension("STARTTLS")
-	if hasStartTLS {
-		if err := client.StartTLS(tlsConfig); err != nil {
-			return fmt.Errorf("client startTLS error: %s", err)
-		}
-	}
 
 	var auth smtp.Auth
 	if server.Auth {
